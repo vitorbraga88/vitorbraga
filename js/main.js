@@ -16,21 +16,20 @@
 
   const pad = n => String(n).padStart(3, '0');
 
-  // Perfil como primeiro slide; 62 memórias a seguir
-  const fotos = [
-    {
-      full:  'assets/memorias/perfil.jpg',
-      thumb: 'assets/memorias/perfil.jpg',
-      alt:   'Foto de perfil — Vitor Braga'
-    },
-    ...Array.from({ length: 62 }, (_, i) => ({
-      full:  `assets/memorias/memoria_${pad(i + 1)}.jpg`,
-      thumb: `assets/memorias/thumbnails/memoria_${pad(i + 1)}.jpg`,
-      alt:   `Memória ${i + 1}`
-    }))
-  ];
+  // Lista real de arquivos de memória (excluindo perfil), ordenada numericamente
+  const arquivos = Array.from({ length: 69 }, (_, i) => `memoria_${pad(i + 1)}.jpg`);
 
-  const TOTAL_FOTOS = fotos.length; // 63
+  // Coloca memoria_050 como capa (primeira posição)
+  const CAPA = 'memoria_050.jpg';
+  const ordenadas = [CAPA, ...arquivos.filter(n => n !== CAPA)];
+
+  const fotos = ordenadas.map((nome, i) => ({
+    full:  `assets/memorias/${nome}`,
+    thumb: `assets/memorias/thumbnails/${nome}`,
+    alt:   i === 0 ? 'Capa — Memória 50' : `Memória ${nome.match(/\d+/)[0]}`
+  }));
+
+  const TOTAL_FOTOS = fotos.length; // 69
 
   /* ─── FOOTER ANO ────────────────────────────────────────── */
   const yearEl = document.getElementById('footerYear');
