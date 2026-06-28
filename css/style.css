@@ -562,9 +562,11 @@ ul { list-style: none; }
 }
 
 .familia__emoji {
-  font-size: 3rem;
+  display: block;
+  margin-inline: auto;
   margin-bottom: var(--space-md);
-  line-height: 1;
+  width: 80px;
+  height: auto;
 }
 
 .familia__title {
@@ -595,6 +597,8 @@ ul { list-style: none; }
 .carousel {
   position: relative;
   user-select: none;
+  max-width: 720px;
+  margin-inline: auto;
 }
 
 .carousel__track-wrap {
@@ -615,6 +619,7 @@ ul { list-style: none; }
   flex: 0 0 100%;
   position: relative;
   aspect-ratio: 4/5;
+  max-height: 80svh;
   overflow: hidden;
   background: var(--bg-2);
   cursor: zoom-in;
@@ -929,6 +934,13 @@ ul { list-style: none; }
 .footer__copy {
   font-size: 0.8rem;
   color: var(--text-2);
+}
+
+.social-link--whatsapp:hover {
+  background: rgba(37,211,102,0.08);
+  border-color: rgba(37,211,102,0.4);
+  color: #25d366;
+  box-shadow: 0 6px 20px rgba(37,211,102,0.15);
 }
 
 /* ─── 14. RESPONSIVO ──────────────────────────────────────── */

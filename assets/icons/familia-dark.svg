@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 88 80" aria-label="Família" role="img">
+  <!-- Adult 1 (pai) -->
+  <circle cx="12" cy="12" r="10" fill="#5c3317"/>
+  <rect x="4" y="22" width="16" height="50" rx="5" fill="#5c3317"/>
+  <!-- Adult 2 (mãe) -->
+  <circle cx="33" cy="14" r="9" fill="#5c3317"/>
+  <rect x="25.5" y="23" width="15" height="49" rx="5" fill="#5c3317"/>
+  <!-- Child 1 (filha) -->
+  <circle cx="53" cy="22" r="7" fill="#7b4b26"/>
+  <rect x="46.5" y="29" width="13" height="43" rx="4" fill="#7b4b26"/>
+  <!-- Child 2 (filho) -->
+  <circle cx="72" cy="27" r="6" fill="#7b4b26"/>
+  <rect x="66" y="33" width="12" height="39" rx="4" fill="#7b4b26"/>
+</svg>

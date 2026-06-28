@@ -12,17 +12,25 @@
   'use strict';
 
   /* ─── CONFIG ───────────────────────────────────────────── */
-  const TOTAL_FOTOS = 62;
-  const VISIBLE_SLIDES = 1; // carrossel mostra 1 por vez
   const REDUCED_MOTION = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
   const pad = n => String(n).padStart(3, '0');
 
-  const fotos = Array.from({ length: TOTAL_FOTOS }, (_, i) => ({
-    full:  `assets/memorias/memoria_${pad(i + 1)}.jpg`,
-    thumb: `assets/memorias/thumbnails/memoria_${pad(i + 1)}.jpg`,
-    alt:   `Memória ${i + 1}`
-  }));
+  // Perfil como primeiro slide; 62 memórias a seguir
+  const fotos = [
+    {
+      full:  'assets/memorias/perfil.jpg',
+      thumb: 'assets/memorias/perfil.jpg',
+      alt:   'Foto de perfil — Vitor Braga'
+    },
+    ...Array.from({ length: 62 }, (_, i) => ({
+      full:  `assets/memorias/memoria_${pad(i + 1)}.jpg`,
+      thumb: `assets/memorias/thumbnails/memoria_${pad(i + 1)}.jpg`,
+      alt:   `Memória ${i + 1}`
+    }))
+  ];
+
+  const TOTAL_FOTOS = fotos.length; // 63
 
   /* ─── FOOTER ANO ────────────────────────────────────────── */
   const yearEl = document.getElementById('footerYear');
@@ -88,7 +96,7 @@
       const slide = document.createElement('div');
       slide.className = 'carousel__slide';
       slide.setAttribute('role', 'tabpanel');
-      slide.setAttribute('aria-label', `Foto ${i + 1} de ${TOTAL_FOTOS}`);
+      slide.setAttribute('aria-label', `Foto ${i + 1} de ${fotos.length}`);
       slide.setAttribute('aria-hidden', i !== 0 ? 'true' : 'false');
       slide.dataset.index = i;
 
@@ -144,7 +152,7 @@
       dotsWrap.appendChild(dot);
     });
 
-    // ── Lazy load ──
+    // ── Lazy load — carrega full diretamente (sem desfoque) ──
     function loadSlide(index) {
       if (loadedIndexes.has(index)) return;
       loadedIndexes.add(index);
@@ -152,8 +160,7 @@
       if (!slide) return;
       const img = slide.querySelector('.carousel__img');
       if (!img) return;
-      // Carrega thumb primeiro
-      img.src = img.dataset.thumb;
+      img.src = img.dataset.full;
     }
 
     // Pré-carrega slides vizinhos
