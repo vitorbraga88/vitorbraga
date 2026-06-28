@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vitor Braga — Engenheiro de Sistemas Elétricos, DevDesigner e entusiasta de tecnologia." />
+  <title>Vitor Braga</title>
+
+  <!-- Google Fonts: Space Grotesk + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════════════ NAV ═══════════════════════════════════ -->
+  <nav class="nav" role="navigation" aria-label="Navegação principal">
+    <div class="nav__inner">
+      <span class="nav__brand">VB</span>
+      <ul class="nav__links">
+        <li><a href="#sobre">Sobre</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#memorias">Memórias</a></li>
+        <li><a href="#contato">Contato</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+
+    <!-- ══════════════════════════════════ HERO ══════════════════════════════════ -->
+    <section class="hero" id="hero" aria-label="Apresentação">
+      <div class="hero__bg-grid" aria-hidden="true"></div>
+      <div class="hero__particles" aria-hidden="true" id="particles"></div>
+
+      <div class="hero__content">
+        <div class="hero__photo-wrap">
+          <div class="hero__photo-hex" aria-hidden="true"></div>
+          <img
+            src="assets/memorias/perfil.jpg"
+            alt="Foto de perfil de Vitor Braga"
+            class="hero__photo"
+            onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+          />
+          <div class="hero__photo-placeholder" aria-hidden="true">VB</div>
+        </div>
+
+        <div class="hero__text">
+          <p class="hero__greeting">Olá, eu sou</p>
+          <h1 class="hero__name">Vitor Braga</h1>
+          <p class="hero__headline">
+            ⚡ Engenheiro de Sistemas Elétricos · Proteção &amp; Operação
+            <span class="hero__headline-break">· DevDesigner nas horas vagas 🛰️</span>
+          </p>
+          <div class="hero__badges" aria-label="Tags de interesse">
+            <span class="badge">Elétrica</span>
+            <span class="badge">Dev</span>
+            <span class="badge">SCADA</span>
+            <span class="badge">Linux</span>
+            <span class="badge">Geek</span>
+          </div>
+          <a href="#sobre" class="btn btn--primary" aria-label="Ir para a seção Sobre">
+            Conheça mais <span aria-hidden="true">↓</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__scroll-hint" aria-hidden="true">
+        <span></span>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════ BIO ═══════════════════════════════════ -->
+    <section class="bio section" id="sobre" aria-labelledby="bio-title">
+      <div class="container">
+        <h2 class="section__title" id="bio-title">
+          <span class="section__title-line" aria-hidden="true"></span>
+          Quem sou eu
+        </h2>
+
+        <div class="bio__card card-glass reveal">
+          <p class="bio__text">
+            👋 Sou o Vitor, engenheiro eletricista apaixonado por fazer máquina conversar com código.
+          </p>
+          <p class="bio__text">
+            🏭 No dia a dia vivo entre proteção elétrica, automação industrial e SCADA numa usina termelétrica — onde cada byte importa e cada falha tem consequência real.
+          </p>
+          <p class="bio__text">
+            💻 Fora dali, viro DevDesigner: monto apps, dashboards e automações que resolvem problema de verdade. Do servidor Linux ao front-end, da API ao deploy.
+          </p>
+          <p class="bio__text">
+            🎮 Geek de carteirinha, fã de tecnologia, futurismo e de transformar ideia em produto funcional.
+          </p>
+          <p class="bio__text bio__text--highlight">
+            ❤️ Acima de tudo, sou cara de família — é o que dá sentido a tudo isso.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════ SKILLS ═════════════════════════════════ -->
+    <section class="skills section" id="skills" aria-labelledby="skills-title">
+      <div class="container">
+        <h2 class="section__title" id="skills-title">
+          <span class="section__title-line" aria-hidden="true"></span>
+          Áreas de interesse
+        </h2>
+
+        <div class="skills__grid">
+
+          <!-- Engenharia -->
+          <div class="skills__block reveal">
+            <h3 class="skills__block-title">
+              <span class="skills__block-icon" aria-hidden="true">🔧</span>
+              Engenharia
+            </h3>
+            <ul class="skills__list" role="list">
+              <li class="skill-card" tabindex="0">
+                <span class="skill-card__icon" aria-hidden="true">⚡</span>
+                <span class="skill-card__label">Sistemas elétricos de potência</span>
+              </li>
+              <li class="skill-card" tabindex="0">
+                <span class="skill-card__icon" aria-hidden="true">🛡️</span>
+                <span class="skill-card__label">Proteção e operação</span>
+              </li>
+              <li class="skill-card" tabindex="0">
+                <span class="skill-card__icon" aria-hidden="true">🏭</span>
+                <span class="skill-card__label">Geração de energia / Termelétricas</span>
+              </li>
+              <li class="skill-card" tabindex="0">
+                <span class="skill-card__icon" aria-hidden="true">🤖</span>
+                <span class="skill-card__label">Automação industrial</span>
+              </li>
+              <li class="skill-card" tabindex="0">
+                <span class="skill-card__icon" aria-hidden="true">🖥️</span>
+                <span class="skill-card__label">SCADA (Elipse E3)</span>
+              </li>
+              <li class="skill-card" tabindex="0">
+                <span class="skill-card__icon" aria-hidden="true">🛢️</span>
+                <span class="skill-card__label">Óleo &amp; Gás</span>
+              </li>
+            </ul>
+          </div>
+
+          <!-- Dev & Tech -->
+          <div class="skills__block reveal">
+            <h3 class="skills__block-title">
+              <span class="skills__block-icon" aria-hidden="true">💻</span>
+              Dev &amp; Tech
+            </h3>
+            <ul class="skills__list" role="list">
+              <li class="skill-card" tabindex="0">
+                <span class="skill-card__icon" aria-hidden="true">📱</span>
+                <span class="skill-card__label">Desenvolvimento de apps e dashboards</span>
+              </li>
+              <li class="skill-card" tabindex="0">
+                <span class="skill-card__icon" aria-hidden="true">🌐</span>
+                <span class="skill-card__label">Front-end (HTML / CSS / JS)</span>
+              </li>
+              <li class="skill-card" tabindex="0">
+                <span class="skill-card__icon" aria-hidden="true">🐍</span>
+                <span class="skill-card__label">Python &amp; automações</span>
+              </li>
+              <li class="skill-card" tabindex="0">
+                <span class="skill-card__icon" aria-hidden="true">🐧</span>
+                <span class="skill-card__label">Servidor Linux (Ubuntu, Docker)</span>
+              </li>
+              <li class="skill-card" tabindex="0">
+                <span class="skill-card__icon" aria-hidden="true">🔗</span>
+                <span class="skill-card__label">Self-hosting &amp; integrações (Telegram, APIs)</span>
+              </li>
+              <li class="skill-card" tabindex="0">
+                <span class="skill-card__icon" aria-hidden="true">🎨</span>
+                <span class="skill-card__label">UI/UX e design de produto</span>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════ FAMÍLIA / INTRO GALERIA ════════════════════ -->
+    <section class="familia section" id="familia" aria-labelledby="familia-title">
+      <div class="container">
+        <div class="familia__card card-glass reveal">
+          <div class="familia__emoji" aria-hidden="true">👨‍👩‍👧‍👦</div>
+          <h2 class="familia__title" id="familia-title">Pessoa de família</h2>
+          <p class="familia__text">
+            Por trás de todo o código e das máquinas, tem uma história de gente. Família é o que ancora tudo — é o motivo de acordar e melhorar.
+          </p>
+          <p class="familia__sub">
+            📸 Um pouco da minha vida fora das telas ↓
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════════════════════════ MEMÓRIAS ═══════════════════════════════ -->
+    <section class="memorias section" id="memorias" aria-labelledby="memorias-title">
+      <div class="container">
+        <h2 class="section__title" id="memorias-title">
+          <span class="section__title-line" aria-hidden="true"></span>
+          Memórias
+        </h2>
+
+        <div class="carousel" role="region" aria-label="Galeria de memórias" aria-roledescription="carrossel">
+          <div class="carousel__track-wrap">
+            <div class="carousel__track" id="carouselTrack" aria-live="polite"></div>
+          </div>
+
+          <!-- Controles -->
+          <button class="carousel__btn carousel__btn--prev" id="prevBtn" aria-label="Foto anterior">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+          </button>
+          <button class="carousel__btn carousel__btn--next" id="nextBtn" aria-label="Próxima foto">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+          </button>
+
+          <!-- Contador -->
+          <div class="carousel__counter" id="carouselCounter" aria-live="polite" aria-atomic="true">1 / 62</div>
+
+          <!-- Dots -->
+          <div class="carousel__dots" id="carouselDots" role="tablist" aria-label="Navegação por foto"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Visualizar foto" hidden>
+      <button class="lightbox__close" id="lightboxClose" aria-label="Fechar">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+      <button class="lightbox__btn lightbox__btn--prev" id="lightboxPrev" aria-label="Foto anterior">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="15 18 9 12 15 6"/></svg>
+      </button>
+      <div class="lightbox__img-wrap">
+        <img src="" alt="" class="lightbox__img" id="lightboxImg" />
+        <div class="lightbox__spinner" aria-hidden="true"></div>
+      </div>
+      <button class="lightbox__btn lightbox__btn--next" id="lightboxNext" aria-label="Próxima foto">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><polyline points="9 18 15 12 9 6"/></svg>
+      </button>
+      <div class="lightbox__counter" id="lightboxCounter" aria-live="polite"></div>
+    </div>
+    <div class="lightbox__backdrop" id="lightboxBackdrop" aria-hidden="true"></div>
+
+  </main>
+
+  <!-- ══════════════════════════════════ FOOTER ════════════════════════════════════ -->
+  <footer class="footer" id="contato" role="contentinfo">
+    <div class="container">
+      <p class="footer__name">Vitor Braga</p>
+      <p class="footer__tagline">⚡ Engenharia · Dev · Família</p>
+
+      <ul class="footer__socials" role="list" aria-label="Redes sociais">
+        <li>
+          <a
+            href="https://www.linkedin.com/in/vitor-cbraga/"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="LinkedIn de Vitor Braga"
+          >
+            <img src="assets/icons/linkedin.svg" alt="" aria-hidden="true" class="social-link__icon" width="24" height="24" />
+            <span>LinkedIn</span>
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://instagram.com/vitor.bra"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="social-link"
+            aria-label="Instagram @vitor.bra"
+          >
+            <img src="assets/icons/instagram.svg" alt="" aria-hidden="true" class="social-link__icon" width="24" height="24" />
+            <span>@vitor.bra</span>
+          </a>
+        </li>
+      </ul>
+
+      <p class="footer__copy">
+        &copy; <span id="footerYear"></span> Vitor Braga. Feito com <span aria-label="amor">❤️</span> e JavaScript puro.
+      </p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
